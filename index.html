@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobile Altenbetreuung</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --orange: #FC9C72;
+      --braun: #4D4845;
+      --hellgrau: #f8f8f8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--braun);
+      background-color: white;
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background-color: white;
+      border-bottom: 1px solid var(--hellgrau);
+      padding: 1rem 2rem;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .logo-placeholder {
+      width: 40px;
+      height: 40px;
+      background-color: var(--hellgrau);
+      background-image: url('https://via.placeholder.com/40');
+      background-size: cover;
+      background-position: center;
+      border-radius: 4px;
+    }
+
+    .schriftzug {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--braun);
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      color: var(--braun);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: var(--orange);
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1, h2 {
+      color: var(--orange);
+      margin-bottom: 1rem;
+    }
+
+    .leistungen {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .leistung-box {
+      background-color: var(--hellgrau);
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+
+    form {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, textarea, select {
+      padding: 0.5rem;
+      border: 1px solid var(--hellgrau);
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: var(--orange);
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #e88b61;
+    }
+
+    footer {
+      background-color: var(--braun);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .datenschutz {
+      font-size: 0.9rem;
+      color: white;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        justify-content: flex-start;
+        width: 100%;
+        margin-top: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <div class="logo-placeholder"></div>
+      <div class="schriftzug">Personenbetreuung</div>
+    </div>
+    <nav>
+      <a href="#ueber">Über mich</a>
+      <a href="#leistungen">Leistungen</a>
+      <a href="#arbeitsweise">Arbeitsweise</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header>
+
+  <section id="ueber">
+    <h1>Über mich</h1>
+    <p>Ich heiße Max Mustermann und biete als diplomierter Pflegefachmann mobile und flexible Altenbetreuung im Raum [Ort] an. Mit Herz, Erfahrung und Menschlichkeit unterstütze ich Senioren und ihre Angehörigen im Alltag.</p>
+  </section>
+
+  <section id="leistungen">
+    <h2>Leistungen</h2>
+    <div class="leistungen">
+      <div class="leistung-box">
+        <h3>Alltagshilfe</h3>
+        <p>Begleitung beim Einkaufen, Kochen, Spazierengehen oder zu Terminen.</p>
+      </div>
+      <div class="leistung-box">
+        <h3>Pflegeunterstützung</h3>
+        <p>Unterstützung bei Körperpflege, Mobilität und Medikamenteneinnahme.</p>
+      </div>
+      <div class="leistung-box">
+        <h3>Angehörigen-Entlastung</h3>
+        <p>Stundenweise Betreuung zur Entlastung pflegender Angehöriger.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="arbeitsweise">
+    <h2>Arbeitsweise</h2>
+    <p>Ich arbeite zuverlässig, flexibel und auf Augenhöhe mit meinen Klient:innen. Im kostenlosen Erstgespräch klären wir gemeinsam, wie ich bestmöglich unterstützen kann. Dabei stehen Vertrauen, Würde und Individualität immer im Vordergrund.</p>
+  </section>
+
+  <section id="kontakt">
+    <h2>Kontakt</h2>
+    <p>Sie möchten mehr erfahren oder ein unverbindliches Gespräch vereinbaren?</p>
+    <form action="https://formspree.io/f/xblgwqyl" method="POST">
+      <label for="name">Ihr Name*</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Ihre E-Mail-Adresse*</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="telefon">Ihre Telefonnummer</label>
+      <input type="tel" id="telefon" name="telefon">
+
+      <label for="bedarf">Welche Art von Unterstützung wird benötigt?</label>
+      <select id="bedarf" name="bedarf">
+        <option value="">Bitte auswählen</option>
+        <option value="alltagshilfe">Alltagshilfe</option>
+        <option value="pflege">Pflegeunterstützung</option>
+        <option value="entlastung">Angehörigen-Entlastung</option>
+        <option value="anderes">Anderes</option>
+      </select>
+
+      <label for="stunden">Wie viele Stunden pro Woche sind ungefähr geplant?</label>
+      <input type="text" id="stunden" name="stunden">
+
+      <label for="zeitfenster">Gibt es bevorzugte Tage oder Zeitfenster?</label>
+      <textarea id="zeitfenster" name="zeitfenster" rows="3"></textarea>
+
+      <label for="nachricht">Ihre Nachricht</label>
+      <textarea id="nachricht" name="nachricht" rows="4"></textarea>
+
+      <label for="datenschutz" style="display: flex; align-items: center; gap: 0.5rem;">
+        <input type="checkbox" id="datenschutz" name="datenschutz" required>
+        <span>Ich habe die <a href="datenschutzerklaerung.html" style="color: var(--orange); text-decoration: underline;">Datenschutzerklärung</a> gelesen und bin einverstanden.</span>
+      </label>
+
+      <button type="submit">Nachricht senden</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Mobile Altenbetreuung – Max Mustermann | Alle Rechte vorbehalten</p>
+    <p class="datenschutz">
+      Hinweis gem&auml;&szlig; DSGVO: Diese Website erhebt und verarbeitet keine personenbezogenen Daten. Es werden keine Cookies verwendet und kein Tracking eingesetzt.
+    </p>
+  </footer>
+</body>
+</html>
