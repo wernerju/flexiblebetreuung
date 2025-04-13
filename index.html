@@ -315,5 +315,16 @@
   <footer>
     <p>&copy; 2025 Flexible Betreuung – Werner Juppe | Alle Rechte vorbehalten</p>
   </footer>
+<script>
+  // Navigation automatisch schließen, wenn ein Link angeklickt wird
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      const nav = document.querySelector('nav');
+      if (nav.classList.contains('open')) {
+        nav.classList.remove('open');
+      }
+    });
+  });
+</script>
 </body>
 </html>
