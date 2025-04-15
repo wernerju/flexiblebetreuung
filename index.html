@@ -87,13 +87,22 @@
       padding: 1.5rem;
       border-radius: 8px;
     }
-
+    
     form {
       display: grid;
       gap: 1rem;
       margin-top: 1.5rem;
     }
 
+    /* === Formularbereich optisch hervorheben === */
+    .formular-container {
+      background-color: var(--hellgrau);
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    
     label {
       font-weight: bold;
     }
@@ -256,6 +265,8 @@ nav a:hover {
   <section id="kontakt">
     <h2>Kontakt</h2>
     <p>Sie möchten mehr erfahren oder ein unverbindliches Gespräch vereinbaren?</p>
+    <!-- Formularbereich optisch abgesetzt -->
+    <div class="formular-container">
     <form action="https://formspree.io/f/xblgwqyl" method="POST">
       <label for="name">Ihr Name*</label>
       <input type="text" id="name" name="name" required>
@@ -291,6 +302,7 @@ nav a:hover {
 
       <button type="submit">Nachricht senden</button>
     </form>
+    </div>
   </section>
 
   <footer>
