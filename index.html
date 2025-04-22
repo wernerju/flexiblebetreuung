@@ -172,6 +172,60 @@ nav a:hover {
   color: var(--orange);
 }
 
+/* === Hero Section === */
+.hero {
+  background: linear-gradient(rgba(77, 72, 69, 0.6), rgba(77, 72, 69, 0.6)),
+              url('https://via.placeholder.com/1600x500') no-repeat center center/cover;
+  color: white;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content {
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--orange);
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e88b61;
+}
+
+/* Mobilfreundlich */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+    
 .burger {
   display: none;
   background-color: var(--orange); /* sichtbarer Hintergrund */
@@ -252,14 +306,28 @@ nav a:hover {
   </style>
 </head>
 <body>
+  <!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="hero-overlay">
+    <div class="hero-content">
+      <h1>Mobile & flexible Altenbetreuung</h1>
+      <p>Mit Herz, Kompetenz und Zeit für Menschen</p>
+      <a href="#kontakt" class="cta-button">📞 Jetzt Kontakt aufnehmen</a>
+    </div>
+  </div>
+</section>
+
   <header>
     <div class="logo-container">
-      <div class="logo-placeholder"></div>
-      <div class="schriftzug">Flexible Betreuung</div>
+      <a href="#home" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none;">
+        <div class="logo-placeholder"></div>
+        <div class="schriftzug">Personenbetreuung</div>
+      </a>
       <button class="burger" onclick="document.querySelector('nav').classList.toggle('open')">
-      ☰
+        ☰
       </button>
     </div>
+
     <nav>
       <a href="#ueber">Über mich</a>
       <a href="#leistungen">Leistungen</a>
