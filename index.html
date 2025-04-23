@@ -306,6 +306,26 @@ nav a:hover {
   </style>
 </head>
 <body>
+  
+   <header>
+    <div class="logo-container">
+      <a href="#home" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none;">
+        <div class="logo-placeholder"></div>
+        <div class="schriftzug">Personenbetreuung</div>
+      </a>
+      <button class="burger" onclick="document.querySelector('nav').classList.toggle('open')">
+        ☰
+      </button>
+    </div>
+    
+    <nav>
+      <a href="#ueber">Über mich</a>
+      <a href="#leistungen">Leistungen</a>
+      <a href="#arbeitsweise">Arbeitsweise</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header>
+
   <!-- Hero Section -->
 <section id="home" class="hero">
   <div class="hero-overlay">
@@ -316,25 +336,6 @@ nav a:hover {
     </div>
   </div>
 </section>
-
-  <header>
-    <div class="logo-container">
-      <a href="#home" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none;">
-        <div class="logo-placeholder"></div>
-        <div class="schriftzug">Personenbetreuung</div>
-      </a>
-      <button class="burger" onclick="document.querySelector('nav').classList.toggle('open')">
-        ☰
-      </button>
-    </div>
-
-    <nav>
-      <a href="#ueber">Über mich</a>
-      <a href="#leistungen">Leistungen</a>
-      <a href="#arbeitsweise">Arbeitsweise</a>
-      <a href="#kontakt">Kontakt</a>
-    </nav>
-  </header>
   
   <section>
     <div style="max-width: 900px; margin: auto;">
