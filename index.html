@@ -304,10 +304,13 @@ nav a:hover {
   background-color: #1ebc5a;
 }
 
-.container {
-  max-width: 1600px; /* gleiche Breite wie Hero-Background */
-  margin: 0 auto;
-  padding: 0 1.5rem;
+/* === Einheitliches Layout für Container in Header, Section & Footer === */
+header .container,
+section .container,
+footer .container {
+  max-width: 1600px;  /* maximale Breite auf großen Bildschirmen */
+  margin: 0 auto;     /* zentriert die Inhalte */
+  padding: 0 1.5rem;  /* Innenabstand links und rechts */
 }
 
   </style>
