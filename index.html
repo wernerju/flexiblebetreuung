@@ -33,7 +33,6 @@
       background-color: #cccccc;
       border-bottom: 6px solid var(--border);
       padding: 1rem 2rem;
-      margin-bottom: 1rem; /* Abstand zur Hero Section */
       z-index: 1000;
       display: flex;
       justify-content: space-between;
@@ -186,7 +185,7 @@ nav a:hover {
 }
 
 .hero-content {
-  padding: 2rem 1.5rem; /* Top-Bottom / Left-Right */
+  padding: 2rem 0rem; /* Top-Bottom / Left-Right */
 }
 
 .hero h1 {
@@ -312,6 +311,13 @@ footer .container {
   max-width: 1600px;  /* maximale Breite auf großen Bildschirmen */
   margin: 0 auto;     /* zentriert die Inhalte */
   padding: 0 1.5rem;  /* Innenabstand links und rechts */
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 }
 
   </style>
