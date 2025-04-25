@@ -273,6 +273,12 @@ nav a:hover {
     display: none;
   }
 
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   nav {
     display: flex !important;
     flex-direction: row;
@@ -281,9 +287,15 @@ nav a:hover {
     gap: 2rem;
     margin-top: 0;
     width: auto;
+    flex-grow: 1;
+  }
+
+  .logo-container {
+    flex-shrink: 0;
   }
 }
 
+    
 /* WhatsApp Floating Button */
 .whatsapp-float {
   position: fixed;
