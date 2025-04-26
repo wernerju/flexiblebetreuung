@@ -242,9 +242,12 @@ nav a:hover {
 }
 
 @media (max-width: 600px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
+  header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify content: space-between;
+    flex-wrap: nowrap; /* NEU: verhindert Umbruch */
   }
 
   .burger {
@@ -322,12 +325,6 @@ footer .container {
   margin: 0 auto;     /* zentriert die Inhalte */
   padding: 0 1.5rem;  /* Innenabstand links und rechts */
 }
-
-@media (max-width: 600px) {
-  .container {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
 
 @media (min-width: 1024px) {
   header .container {
