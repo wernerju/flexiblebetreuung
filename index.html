@@ -157,9 +157,11 @@
 
 nav {
   display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
+  flex-grow: 1;
 }
 
 nav a {
@@ -283,12 +285,6 @@ nav a:hover {
   }
 
   nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 1.5rem;
-    flex-grow: 1;
     padding-left: 2rem; /* Abstand links zum Logo */
   }
 
