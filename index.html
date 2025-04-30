@@ -179,7 +179,7 @@ nav a:hover {
 /* === Hero Section === */
 .hero {
   background: linear-gradient(rgba(77, 72, 69, 0.6), rgba(77, 72, 69, 0.6)),
-              url('https://via.placeholder.com/1600x500') no-repeat center center/cover;
+              url('suv-lightning_1600.jpg') no-repeat center center/cover;
   color: white;
   height: 60vh;
   display: flex;
@@ -203,6 +203,24 @@ nav a:hover {
   margin-bottom: 2rem;
 }
 
+.hero-wetter {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+              url('pfad-zum-ausgewählten-bild.jpg') no-repeat center center/cover;
+  color: white;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero-wetter h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
 .cta-button {
   display: inline-block;
   background-color: var(--orange);
@@ -221,15 +239,21 @@ nav a:hover {
 
 /* Mobilfreundlich */
 @media (max-width: 600px) {
-  .hero h1 {
-    font-size: 1.8rem;
+  .hero-wetter {
+    height: 60vh;
+    background-position: center top;
   }
 
-  .hero p {
+  .hero-wetter h1 {
+    font-size: 1.6rem;
+    padding: 0 1rem;
+  }
+
+  .hero-wetter p {
     font-size: 1rem;
+    padding: 0 1rem;
   }
 }
-
     
 .burger {
   display: none;
@@ -374,8 +398,7 @@ footer .container {
   </header>
 
   <!-- Hero Section -->
-<section id="home" class="hero">
-  <div class="hero-overlay">
+<section id="home" class="hero hero-wetter">
     <div class="container">
       <div class="hero-content">
         <h1>Mobile & flexible Betreuung</h1>
@@ -383,7 +406,6 @@ footer .container {
         <a href="#kontakt" class="cta-button">Jetzt Kontakt aufnehmen</a>
       </div>
     </div>
-  </div>
 </section>
 
   <section id="ueber">
