@@ -178,15 +178,14 @@ nav a:hover {
 
 /* === Hero Section === */
 .hero-wetter {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
-              url('suv-lightning_1600.jpg') no-repeat center center/cover;
+  background: url('suv-lightning_1600.jpg') no-repeat center center/cover;
   color: white;
   height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  position: relative;
+  padding: 0 1.5rem; /* kleiner Seitenabstand für Text auf Mobil */
 }
 
 .hero-wetter h1 {
@@ -196,7 +195,8 @@ nav a:hover {
 }
 
 .hero-content {
-  padding: 2rem 0rem; /* Top-Bottom / Left-Right */
+  max-width: 900px; /* <<< Begrenzung nur für Text, nicht fürs Bild */
+  margin: 0 auto;
 }
 
 .hero p {
@@ -383,13 +383,11 @@ footer .container {
 
   <!-- Hero Section -->
 <section id="home" class="hero hero-wetter">
-    <div class="container">
       <div class="hero-content">
         <h1>Mobile & flexible Betreuung</h1>
         <p>Mit Herz, Kompetenz und Zeit für Menschen jeden Alters</p>
         <a href="#kontakt" class="cta-button">Jetzt Kontakt aufnehmen</a>
       </div>
-    </div>
 </section>
 
   <section id="ueber">
