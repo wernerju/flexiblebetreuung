@@ -253,11 +253,16 @@ nav a:hover {
 @media (max-width: 600px) {
   header .container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between; /* <<< trennt Logo und Button */
-    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
     padding: 1rem;
-    gap: 1rem;
+    width: 100%;
+  }
+
+  .header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
   }
 
@@ -265,8 +270,6 @@ nav a:hover {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    flex-shrink: 1;              /* <<< Logo darf sich verkleinern */
-    max-width: 70%;              /* <<< verhindert Überlauf */
   }
 
   .burger {
@@ -278,7 +281,6 @@ nav a:hover {
     font-size: 1.5rem;
     padding: 0.4rem 0.7rem;
     cursor: pointer;
-    flex-shrink: 0;              /* <<< Burger bleibt gleich groß */
   }
 
   nav {
@@ -286,7 +288,6 @@ nav a:hover {
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    margin-top: 1rem;
     padding-left: 1rem;
     gap: 0.5rem;
   }
@@ -378,20 +379,15 @@ footer .container {
   
   <header>
   <div class="container">
-    <!-- Logo links -->
-    <div class="logo-container">
-      <a href="#home" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none;">
-        <div class="logo-placeholder"></div>
-        <div class="schriftzug">Flexible Betreuung</div>
-      </a>
+    <div class="header-row">
+      <div class="logo-container">
+        <a href="#home" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none;">
+          <div class="logo-placeholder"></div>
+          <div class="schriftzug">Flexible Betreuung</div>
+        </a>
+      </div>
+      <button class="burger" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
     </div>
-
-    <!-- Burger-Menü -->
-    <button class="burger" onclick="document.querySelector('nav').classList.toggle('open')">
-      ☰
-    </button>
-
-    <!-- Navigation -->
     <nav>
       <a href="#ueber">Über mich</a>
       <a href="#leistungen">Leistungen</a>
