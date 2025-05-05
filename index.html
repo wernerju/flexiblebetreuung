@@ -255,7 +255,7 @@ nav a:hover {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify content: space-between;
+    justify-content: space-between;
     flex-wrap: nowrap; /* NEU: verhindert Umbruch */
   }
 
@@ -292,6 +292,11 @@ nav a:hover {
     max-width: 1600px;
     margin: 0 auto;
     padding: 0 2rem; /* Abstand links und rechts */
+  }
+
+  header {
+    background-color: #cccccc;
+    border-bottom: 6px solid var(--border);
   }
 
   .logo-container {
@@ -360,13 +365,20 @@ footer .container {
   
   <header>
   <div class="container">
+    <!-- Logo links -->
     <div class="logo-container">
-      <a href="#home">
+      <a href="#home" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none;">
         <div class="logo-placeholder"></div>
         <div class="schriftzug">Flexible Betreuung</div>
       </a>
     </div>
-    <button class="burger">☰</button>
+
+    <!-- Burger-Menü -->
+    <button class="burger" onclick="document.querySelector('nav').classList.toggle('open')">
+      ☰
+    </button>
+
+    <!-- Navigation -->
     <nav>
       <a href="#ueber">Über mich</a>
       <a href="#leistungen">Leistungen</a>
