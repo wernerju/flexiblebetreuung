@@ -40,15 +40,14 @@
       flex-wrap: wrap;
     }
 
+    /* Logo-Container */
     .logo-container {
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      padding-left: 1rem;
-      padding-right: 1rem;
-      flex-grow: 1; /* NEU Logo Container darf wachsen */
+      padding-left: 1rem; /* Abstand vom linken Rand */
     }
-
+    
     .logo-placeholder {
       width: 40px;
       height: 40px;
@@ -106,7 +105,6 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
 
-    
     label {
       font-weight: bold;
     }
@@ -207,7 +205,6 @@ nav a:hover {
   margin-bottom: 2rem;
 }
 
-
 .cta-button {
   display: inline-block;
   background-color: var(--orange);
@@ -240,9 +237,10 @@ nav a:hover {
   }
 }
     
+/* Burger-Menü allgemein */
 .burger {
   display: none;
-  background-color: var(--orange); /* sichtbarer Hintergrund */
+  background-color: var(--orange);
   color: white;
   border: none;
   border-radius: 4px;
@@ -269,9 +267,11 @@ nav a:hover {
   nav {
     display: none;
     flex-direction: column;
-    gap: 0.5rem;
+    align-items: flex-start;   /* <<< linksbündig */
     width: 100%;
     margin-top: 1rem;
+    padding-left: 1rem;        /* <<< Abstand zu Bildschirmrand */
+    gap: 0.5rem;
   }
 
   nav.open {
@@ -290,23 +290,23 @@ nav a:hover {
   }
 
   header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     max-width: 1600px;
     margin: 0 auto;
     padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   nav {
-    padding-left: 1rem; /* Abstand links zum Logo */
-  }
-
-  .logo-container {
-    flex-shrink: 0;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    flex-grow: 1;
   }
 }
-
     
 /* WhatsApp Floating Button */
 .whatsapp-float {
@@ -355,29 +355,30 @@ footer .container {
 </head>
 <body>
   
-   <header>
-    <div class="container">
-      <div class="logo-container">
-        <!-- Logo links: Platzhalter-Bild und Schriftzug -->
-        <a href="#home" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none;">
-          <div class="logo-placeholder"></div>
-          <div class="schriftzug">Flexible Betreuung</div>
-        </a>
-      </div>
-      
-      <!-- Burger ausserhalb von div logo-container, nur am Handy sichtbar -->
-      <button class="burger" onclick="document.querySelector('nav').classList.toggle('open')">
-         ☰
-      </button>
-      
-      <nav>
-        <a href="#ueber">Über mich</a>
-        <a href="#leistungen">Leistungen</a>
-        <a href="#arbeitsweise">Arbeitsweise</a>
-        <a href="#kontakt">Kontakt</a>
-      </nav>
+  <header>
+  <div class="container">
+    <!-- Logo links -->
+    <div class="logo-container">
+      <a href="#home" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none;">
+        <div class="logo-placeholder"></div>
+        <div class="schriftzug">Flexible Betreuung</div>
+      </a>
     </div>
-  </header>
+
+    <!-- Burger-Menü -->
+    <button class="burger" onclick="document.querySelector('nav').classList.toggle('open')">
+      ☰
+    </button>
+
+    <!-- Navigation -->
+    <nav>
+      <a href="#ueber">Über mich</a>
+      <a href="#leistungen">Leistungen</a>
+      <a href="#arbeitsweise">Arbeitsweise</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
 
   <!-- Hero Section -->
 <section id="home" class="hero hero-wetter">
